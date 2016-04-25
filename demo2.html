@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+</head>
+<body>
+<a href="http://www.baidu.com">百度一下</a>
+<script type="text/javascript">
+    $("a").on("click",function(e){
+        alert("我的链接是{"+$(this).attr("href")+"}")
+      //  e.preventDefault();//阻止浏览器跳转
+      //  e.stopPropagation()//阻止document事件
+       return false;//阻止document事件，阻止浏览器跳转
+    })
+    $(document).on("click",function(){
+        alert("单击事件");
+    })
+</script>
+</body>
+</html>
